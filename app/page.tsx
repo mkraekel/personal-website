@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Github, Linkedin, Mail, Code, Database, Globe, Star, Calendar, ExternalLink, Eye, FolderOpen } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Button } from './components/ui/button'
+import { Card, CardContent } from './components/ui/card'
+import { Badge } from './components/ui/badge'
 
 export default function Home() {
   const fadeInUp = {
@@ -693,6 +693,7 @@ export default function Home() {
 
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
             <p>&copy; 2025 Mathis Kräkel. Alle Rechte vorbehalten.</p>
+            <a href={"/impressum"}>Impressum</a>
           </div>
         </div>
       </footer>
