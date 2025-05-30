@@ -5,7 +5,7 @@ import { ArrowRight, Github, Linkedin, Mail, Code, Database, Globe, Star, Calend
 import { Button } from './components/ui/button'
 import { Card, CardContent } from './components/ui/card'
 import { Badge } from './components/ui/badge'
-
+import Image from "next/image";
 export default function Home() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -438,8 +438,10 @@ export default function Home() {
                 <motion.div key={project.title} variants={fadeInUp}>
                   <Card className="bg-slate-800/30 border-slate-700 overflow-hidden hover:bg-slate-800/50 transition-all duration-300 group h-full">
                     <div className="relative overflow-hidden">
-                      <img
+                      <Image
                         src={project.image}
+                        width={100}
+                        height={100}
                         alt={project.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -519,8 +521,10 @@ export default function Home() {
                 <motion.div key={project.title} variants={fadeInUp}>
                   <Card className="bg-slate-800/30 border-slate-700 hover:bg-slate-800/50 transition-all duration-300 group h-full">
                     <div className="relative overflow-hidden">
-                      <img
-                        src={project.image}
+                      <Image
+                          src={project.image}
+                          width={100}
+                          height={100}
                         alt={project.title}
                         className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
