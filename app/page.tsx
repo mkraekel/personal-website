@@ -431,7 +431,7 @@ export default function Home() {
           >
             <h3 className="text-2xl font-semibold mb-8 text-white flex items-center">
               <Star className="mr-2 h-6 w-6 text-yellow-400" />
-              Featured Projects
+              Projects
             </h3>
             <div className="grid lg:grid-cols-2 gap-8">
               {projects.filter(project => project.featured).map((project) => (
