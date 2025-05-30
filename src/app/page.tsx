@@ -453,14 +453,14 @@ export default function Home() {
                         >
                           <Eye className="h-4 w-4" />
                         </Button>
-                        <Button
-                          size="sm"
-                          variant="secondary"
-                          className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <Github className="h-4 w-4" />
-                        </Button>
+                        {/*<Button*/}
+                        {/*  size="sm"*/}
+                        {/*  variant="secondary"*/}
+                        {/*  className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"*/}
+                        {/*  onClick={() => window.open(project.githubUrl, '_blank')}*/}
+                        {/*>*/}
+                        {/*  <Github className="h-4 w-4" />*/}
+                        {/*</Button>*/}
                       </div>
                     </div>
                     <CardContent className="p-6">
