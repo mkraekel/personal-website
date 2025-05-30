@@ -47,13 +47,13 @@ export default function Home() {
       text: "Perfekte Arbeit. Genauso stelle ich mir hervorragende Arbeit vor!",
       author: "Chrisbmental",
       role: "Kunde, Fiverr",
-      skills: ["React", "Node.js", "Next.js", "Express.js", "MySQL"]
+      skills: ["React", "Node.js", "Next.js", "Express.js", "MySQL", "Socket.io"]
     },
     {
-      text: "Die Zusammenarbeit mit Mathis war eine sehr positive Erfahrung. Eine saubere, effiziente Lösung.",
-      author: "Ehrich Paulsen",
+      text: "Absolute Empfehlung!",
+      author: "Luca Dahms",
       role: "Kunde",
-      skills: ["Next.js", "React", "Node.js", "Mantine UI"]
+      skills: ["Next.js", "React", "Node.js", "Hero UI"]
     }
   ]
 
@@ -66,59 +66,31 @@ export default function Home() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Vollständige E-Commerce-Lösung mit modernem Design, Warenkorb-Funktionalität und Zahlungsintegration. Entwickelt mit Next.js und Stripe.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["Next.js", "React", "Stripe", "Tailwind CSS", "Prisma"],
-      liveUrl: "https://demo-ecommerce.example.com",
-      githubUrl: "https://github.com/mkraekel/ecommerce-platform",
+      title: "app.legalbot.de (noch nicht online)",
+      description: "Legalbot ist eine moderne Web-App zur digitalen Abwicklung von Rechtsdienstleistungen – mit Fokus auf Markenrecht. Die Plattform ermöglicht eine einfache und sichere Kommunikation zwischen Mandanten und Kanzleien und automatisiert zentrale Prozesse wie Markenanmeldungen und Markenüberwachung. ",
+      image: "/legalbot.png",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Prisma", "Typescript", "Firestore"],
+      liveUrl: "https://app.legalbot.de",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "Kollaborative Projektmanagement-Anwendung mit Echtzeit-Updates, Drag & Drop und Team-Features. Inspiriert von modernen Workflow-Tools.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-      liveUrl: "https://taskmanager-demo.example.com",
-      githubUrl: "https://github.com/mkraekel/task-manager",
+      title: "PKV-Tool – Lead-Generierung für die private Krankenversicherung",
+      description: "Das PKV-Tool ist eine spezialisierte Webanwendung zur automatisierten Berechnung und Angebotserstellung für private Krankenversicherungen. Interessenten geben ihre persönlichen und beruflichen Daten über ein dynamisches Formular ein – im Hintergrund werden komplexe Tariflogiken berücksichtigt und direkt individuelle Angebote generiert.",
+      image: "/pkv-tool.png",
+      technologies: ["React", "Next.js", "TailwindCSS", "Hero UI",],
+      liveUrl: "https://pkv-tool.vercel.app/",
+      // githubUrl: "https://github.com/mkraekel/task-manager",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "Interaktives Wetter-Dashboard mit Standortbasierung, 7-Tage Vorhersage und anpassbaren Widgets. Nutzt externe APIs für Echtzeitdaten.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["Vue.js", "TypeScript", "Chart.js", "OpenWeather API"],
-      liveUrl: "https://weather-dashboard.example.com",
-      githubUrl: "https://github.com/mkraekel/weather-dashboard",
-      featured: false
-    },
-    {
-      title: "Portfolio CMS",
-      description: "Headless CMS für Portfolio-Websites mit intuitivem Admin-Panel, Medien-Management und SEO-Optimierung.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["Strapi", "React", "PostgreSQL", "AWS S3"],
-      liveUrl: "https://portfolio-cms.example.com",
-      githubUrl: "https://github.com/mkraekel/portfolio-cms",
-      featured: false
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Business Intelligence Dashboard mit Echtzeit-Datenvisualisierung, interaktiven Charts und Export-Funktionen.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["React", "D3.js", "Node.js", "BigQuery", "Material-UI"],
-      liveUrl: "https://analytics-dashboard.example.com",
-      githubUrl: "https://github.com/mkraekel/analytics-dashboard",
-      featured: false
-    },
-    {
-      title: "Social Media App",
-      description: "Moderne Social-Media-Plattform mit Feeds, Stories, Messaging und Benachrichtigungen. Vollständig responsive und PWA-ready.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
-      liveUrl: "https://social-app.example.com",
-      githubUrl: "https://github.com/mkraekel/social-media-app",
+      title: "Allianz Zahnschutz – Digitale Beratung & Abschlussstrecke für Zahnzusatzversicherungen",
+      description: "Diese Webanwendung wurde speziell für die vereinfachte Beratung und den Online-Abschluss von Zahnzusatzversicherungen der Allianz konzipiert. Nutzer erhalten durch wenige gezielte Angaben sofort ein passgenaues Angebot, inklusive Leistungsdetails und direkter Abschlussmöglichkeit – optimiert für Conversions im Versicherungsvertrieb..",
+      image: "/allianz-zahnschutz.png",
+      technologies: ["NextJS", "React", "HeroUI", "TailwindCSS,"],
+      liveUrl: "https://allianz-zahnschutz.de/",
+      // githubUrl: "https://github.com/mkraekel/portfolio-cms",
       featured: true
-    }
+    },
   ]
 
   return (
@@ -514,15 +486,15 @@ export default function Home() {
                           <Eye className="mr-2 h-4 w-4" />
                           Live Demo
                         </Button>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          className="border-slate-600 hover:bg-slate-800"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <Github className="mr-2 h-4 w-4" />
-                          Code
-                        </Button>
+                        {/*<Button*/}
+                        {/*  size="sm"*/}
+                        {/*  variant="outline"*/}
+                        {/*  className="border-slate-600 hover:bg-slate-800"*/}
+                        {/*  onClick={() => window.open(project.githubUrl, '_blank')}*/}
+                        {/*>*/}
+                        {/*  <Github className="mr-2 h-4 w-4" />*/}
+                        {/*  Code*/}
+                        {/*</Button>*/}
                       </div>
                     </CardContent>
                   </Card>
@@ -538,10 +510,10 @@ export default function Home() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold mb-8 text-white flex items-center">
-              <FolderOpen className="mr-2 h-6 w-6 text-blue-400" />
-              Weitere Projekte
-            </h3>
+            {/*<h3 className="text-2xl font-semibold mb-8 text-white flex items-center">*/}
+            {/*  <FolderOpen className="mr-2 h-6 w-6 text-blue-400" />*/}
+            {/*  Weitere Projekte*/}
+            {/*</h3>*/}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.filter(project => !project.featured).map((project) => (
                 <motion.div key={project.title} variants={fadeInUp}>
@@ -582,15 +554,15 @@ export default function Home() {
                           <Eye className="mr-1 h-3 w-3" />
                           Demo
                         </Button>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          className="border-slate-600 hover:bg-slate-800 flex-1"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <Github className="mr-1 h-3 w-3" />
-                          Code
-                        </Button>
+                        {/*<Button*/}
+                        {/*  size="sm"*/}
+                        {/*  variant="outline"*/}
+                        {/*  className="border-slate-600 hover:bg-slate-800 flex-1"*/}
+                        {/*  onClick={() => window.open(project.githubUrl, '_blank')}*/}
+                        {/*>*/}
+                        {/*  <Github className="mr-1 h-3 w-3" />*/}
+                        {/*  Code*/}
+                        {/*</Button>*/}
                       </div>
                     </CardContent>
                   </Card>
