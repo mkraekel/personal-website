@@ -417,7 +417,7 @@ export default function Home() {
               Meine Projekte
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              Eine Auswahl meiner besten Arbeiten - von E-Commerce-Plattformen bis hin zu komplexen Web-Anwendungen
+              Eine Auswahl meiner besten Arbeiten
             </p>
           </motion.div>
 
