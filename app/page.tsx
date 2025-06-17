@@ -1,11 +1,28 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Github, Linkedin, Mail, Code, Database, Globe, Star, Calendar, ExternalLink, Eye, FolderOpen } from 'lucide-react'
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Code,
+  Database,
+  Globe,
+  Star,
+  Calendar,
+  ExternalLink,
+  Eye,
+  FolderOpen,
+  Calculator, TrendingUp, Users, Sparkles
+} from 'lucide-react'
 import { Button } from './components/ui/button'
 import { Card, CardContent } from './components/ui/card'
 import { Badge } from './components/ui/badge'
 import Image from "next/image";
+import ServicesSection from "./components/ServicesSection";
+import {Navigation} from "./components/navigation";
+import Footer from "./components/Footer";
 export default function Home() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -23,25 +40,36 @@ export default function Home() {
 
   const services = [
     {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Web Development",
-      description: "Moderne, responsive Websites mit den neuesten Technologien. Von persönlichen Portfolios bis hin zu komplexen Business-Lösungen.",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      icon: <Calculator className="h-10 w-10" />,
+      title: "Intelligente Lead-Formulare",
+      description: "Verwandeln Sie Besucher in Kunden mit maßgeschneiderten Formularen, die begeistern.",
+      features: [
+        "ROI-Kalkulatoren die verkaufen",
+        "Multi-Step Formulare mit Fortschrittsanzeige",
+        "Intelligente Berechnungen in Echtzeit",
+        "Automatische Lead-Qualifizierung"
+      ],
+      highlight: true,
+      gradient: "from-purple-600 to-blue-600",
+      badge: "SPEZIALISIERUNG",
+      cta: "Mehr erfahren",
+      link: "/lead-generation"
     },
     {
-      icon: <Code className="h-8 w-8" />,
-      title: "Web Apps",
-      description: "Full-Stack Entwicklung moderner Web-Anwendungen mit Fokus auf Benutzerfreundlichkeit, Performance und Skalierbarkeit.",
-      skills: ["Node.js", "Express", "REST APIs", "GraphQL"]
+      icon: <Globe className="h-8 w-8" />,
+      title: "Web Development",
+      description: "Moderne Websites und Landing Pages mit erstklassiger Performance.",
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Database className="h-8 w-8" />,
-      title: "Database Management",
-      description: "Professionelles Datenbank-Design und -Optimierung für höchste Performance und Sicherheit.",
-      skills: ["MySQL", "Firebase", "Prisma", "NoSQL"]
+      title: "Full-Stack Lösungen",
+      description: "Komplette Web-Anwendungen von der Idee bis zur fertigen Lösung.",
+      skills: ["Node.js", "Express", "Firebase", "API Integration"],
+      gradient: "from-green-500 to-emerald-500"
     }
   ]
-
   const testimonials = [
     {
       text: "Perfekte Arbeit. Genauso stelle ich mir hervorragende Arbeit vor!",
@@ -96,30 +124,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-            >
-              Mathis Kräkel
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="hidden md:flex space-x-8"
-            >
-              <a href="#about" className="hover:text-blue-400 transition-colors">Über mich</a>
-              <a href="#services" className="hover:text-blue-400 transition-colors">Services</a>
-              <a href="#projects" className="hover:text-blue-400 transition-colors">Projekte</a>
-              <a href="#testimonials" className="hover:text-blue-400 transition-colors">Referenzen</a>
-              <a href="#contact" className="hover:text-blue-400 transition-colors">Kontakt</a>
-            </motion.div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
@@ -274,57 +279,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-slate-950/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-              Meine Services
-            </h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              Professionelle Lösungen für Ihre digitalen Herausforderungen
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {services.map((service, index) => (
-              <motion.div key={service.title} variants={fadeInUp}>
-                <Card className="h-full bg-slate-800/30 border-slate-700 hover:bg-slate-800/50 transition-all duration-300 group">
-                  <CardContent className="p-6">
-                    <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-300 mb-4 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {service.skills.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="bg-slate-700 text-slate-300">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
+      <ServicesSection />
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -643,64 +598,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-950/80 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Mathis Kräkel
-              </h3>
-              <p className="text-slate-400">
-                Softwareentwickler mit Fokus auf innovative digitale Lösungen.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Schnelle Links</h4>
-              <div className="space-y-2">
-                <a href="#about" className="block text-slate-400 hover:text-blue-400 transition-colors">Über mich</a>
-                <a href="#services" className="block text-slate-400 hover:text-blue-400 transition-colors">Services</a>
-                <a href="#projects" className="block text-slate-400 hover:text-blue-400 transition-colors">Projekte</a>
-                <a href="#testimonials" className="block text-slate-400 hover:text-blue-400 transition-colors">Referenzen</a>
-                <a href="#contact" className="block text-slate-400 hover:text-blue-400 transition-colors">Kontakt</a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Verbinden</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/mkraekel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-colors"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mathis-krkel-b286b325a/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="mailto:mathis@kraekel.com"
-                  className="text-slate-400 hover:text-blue-400 transition-colors"
-                >
-                  <Mail className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2025 Mathis Kräkel. Alle Rechte vorbehalten.</p>
-            <a href={"/impressum"}>Impressum</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
