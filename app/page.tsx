@@ -115,7 +115,7 @@ export default function Home() {
       description: "Diese Webanwendung wurde speziell für die vereinfachte Beratung und den Online-Abschluss von Zahnzusatzversicherungen der Allianz konzipiert. Nutzer erhalten durch wenige gezielte Angaben sofort ein passgenaues Angebot, inklusive Leistungsdetails und direkter Abschlussmöglichkeit – optimiert für Conversions im Versicherungsvertrieb..",
       image: "/allianz-zahnschutz.png",
       technologies: ["NextJS", "React", "HeroUI", "TailwindCSS,"],
-      liveUrl: "https://allianz-zahnschutz.de/",
+      liveUrl: "https://www.mein-zahnzusatz.de/",
       // githubUrl: "https://github.com/mkraekel/portfolio-cms",
       featured: true
     },
