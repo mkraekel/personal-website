@@ -10,6 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mathiskraekel.de"),
+  alternates: { canonical: "/" },
   title: "Mathis Kräkel - Softwareentwicklung & Beratung",
   description: "Professionelle Softwareentwicklung und technische Beratung für moderne Web-Anwendungen. Maßgeschneiderte Lösungen mit React, Next.js, Node.js und TypeScript – individuell entwickelt für Ihre digitalen Herausforderungen.",
   keywords: [
