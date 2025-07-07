@@ -124,7 +124,8 @@ export default function Home() {
       description: "Interaktiver Online-Rechner für den Tarif Zahn100 der Versicherungskammer Bayern. Besucher erhalten nach wenigen Eingaben ein individuelles Angebot und können den Antrag direkt starten.",
       technologies: ["Next.js", "React", "TailwindCSS"],
       liveUrl: "https://vkb-zahn100.de/?step=0",
-      featured: true
+      featured: true,
+      image: "/vkb-bayern.png",
     },
   ]
 
