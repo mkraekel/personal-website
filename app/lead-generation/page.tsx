@@ -372,10 +372,26 @@ export default function LeadGenerationPage() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-300 mb-4">
-                      Produkt-Konfigurator mit Live-Preisberechnung. 
+                      Produkt-Konfigurator mit Live-Preisberechnung.
                       Konfiguration wird gespeichert und kann per E-Mail angefordert werden.
                     </p>
                     <div className="text-sm text-green-400">→ Kaufinteressenten sammeln</div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div variants={fadeInUp}>
+                <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 backdrop-blur-sm h-full">
+                  <CardHeader>
+                    <div className="text-red-400 font-semibold mb-2">Für Versicherungen</div>
+                    <CardTitle>VKB Zahn100 Funnel</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-300 mb-4">
+                      Online-Rechner und Abschlussstrecke für den Tarif Zahn100 der Versicherungskammer Bayern.
+                      Interessenten erhalten ihr Angebot in wenigen Schritten.
+                    </p>
+                    <div className="text-sm text-green-400">→ Digitale Abschlussstrecke</div>
                   </CardContent>
                 </Card>
               </motion.div>
