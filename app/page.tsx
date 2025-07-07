@@ -119,6 +119,13 @@ export default function Home() {
       // githubUrl: "https://github.com/mkraekel/portfolio-cms",
       featured: true
     },
+    {
+      title: "VKB Zahn100 – Lead-Funnel für Zahnzusatzversicherung",
+      description: "Interaktiver Online-Rechner für den Tarif Zahn100 der Versicherungskammer Bayern. Besucher erhalten nach wenigen Eingaben ein individuelles Angebot und können den Antrag direkt starten.",
+      technologies: ["Next.js", "React", "TailwindCSS"],
+      liveUrl: "https://vkb-zahn100.de/?step=0",
+      featured: true
+    },
   ]
 
   return (
