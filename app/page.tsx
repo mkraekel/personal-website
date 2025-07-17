@@ -193,8 +193,8 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
                 <p>
-                  Hey! Ich bin Mathis, ein engagierter Softwareentwickler und Schüler auf dem Weg zum Abitur.
-                  Derzeit arbeite ich bei der Seibert Group, wo ich meine Fähigkeiten in der Softwareentwicklung kontinuierlich erweitere.
+                  Hey! Ich bin Mathis, leidenschaftlicher Softwareentwickler mit abgeschlossenem Abitur.
+                  Derzeit arbeite ich bei der Seibert Group und vertiefe dort kontinuierlich meine Kenntnisse in moderner Softwareentwicklung.
                 </p>
                 <p>
                   Meine Expertise umfasst die Arbeit mit Node.js, TypeScript, React und Next.js.
