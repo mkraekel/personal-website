@@ -65,15 +65,15 @@ export default function LeadGenerationPage() {
               >
                 Standardformulare bringen keine Leads?
               </motion.p>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-purple-400 bg-clip-text text-transparent leading-tight">
-                Intelligente Formulare<br />die verkaufen
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent leading-tight">
+                Aus Besuchern werden Kunden
               </h1>
             </div>
 
             {/* Value Proposition - Ehrlicher */}
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ich entwickle <strong className="text-white">maßgeschneiderte Formularsysteme</strong> mit intelligenten Berechnungen und perfekter User Experience. 
-              <span className="text-purple-400"> Keine 08/15 Kontaktformulare - sondern echte Lead-Magneten.</span>
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Mit intelligenten Formularen und Kalkulatoren verwandeln Sie Ihre Website-Besucher in zahlende Kunden.
+              <span className="text-blue-400 font-semibold"> Garantiert mehr Anfragen</span> für Ihr Unternehmen.
             </p>
 
             {/* Social Proof Teaser - Realistischer */}

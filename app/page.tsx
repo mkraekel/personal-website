@@ -94,7 +94,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: "app.legalbot.de (noch nicht online)",
+      title: "app.legalbot.de",
       description: "Legalbot ist eine moderne Web-App zur digitalen Abwicklung von Rechtsdienstleistungen – mit Fokus auf Markenrecht. Die Plattform ermöglicht eine einfache und sichere Kommunikation zwischen Mandanten und Kanzleien und automatisiert zentrale Prozesse wie Markenanmeldungen und Markenüberwachung. ",
       image: "/legalbot.png",
       technologies: ["Next.js", "React", "Tailwind CSS", "Prisma", "Typescript", "Firestore"],
@@ -144,35 +144,186 @@ export default function Home() {
           >
             <div className="inline-block mb-4">
               <Badge variant="secondary" className="bg-blue-500/10 text-blue-400 border-blue-500/20">
-                Softwareentwickler
+                Digitale Lösungen für mehr Umsatz
               </Badge>
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent">
               Mathis Kräkel
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ein erfahrener Softwareentwickler, der elegante Lösungen entwickelt
-              und beeindruckende digitale Erlebnisse schafft.
+              Ich helfe <strong>Unternehmen dabei, mehr Kunden zu gewinnen</strong> und Prozesse zu automatisieren.
+              Mit <strong>maßgeschneiderten digitalen Lösungen</strong> steigern Sie Ihren Umsatz und sparen Zeit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                aria-label="Erfahren Sie mehr über meine Dienstleistungen"
               >
-                Erfahre mehr
-                <ArrowRight className="ml-2 h-4 w-4" />
+                Wie ich Ihnen helfe
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-slate-600 hover:bg-slate-800"
                 onClick={() => window.open('https://calendly.com/mathis-kraekel-ijhy/30min', '_blank')}
+                aria-label="Kostenloses Beratungsgespräch vereinbaren"
               >
-                <Calendar className="mr-2 h-4 w-4" />
-                Buche ein Meeting
+                <Calendar className="mr-2 h-4 w-4" aria-hidden="true" />
+                Kostenloses Beratungsgespräch
               </Button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Quick Access - NEU */}
+      <section className="py-16 px-4 bg-slate-950/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Womit kann ich Ihnen helfen?
+            </h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Wählen Sie Ihre größte Herausforderung - ich zeige Ihnen die Lösung
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Kunden gewinnen */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+              className="group cursor-pointer"
+              onClick={() => window.location.href = '/lead-generation'}
+            >
+              <Card className="relative h-full bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 group-hover:from-purple-600/10 group-hover:to-blue-600/10 transition-all duration-300" />
+                <CardContent className="p-8 relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-3 rounded-xl">
+                      <Calculator className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                        Mehr Kunden gewinnen
+                      </h3>
+                      <p className="text-sm text-slate-400">Intelligente Formulare & Kalkulatoren</p>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    Ihre Website hat Besucher, aber keine Anfragen? Mit intelligenten Formularen und
+                    Kalkulatoren verwandeln Sie Besucher in zahlende Kunden.
+                  </p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                      ROI-Kalkulatoren die verkaufen
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                      Multi-Step Formulare mit Wow-Effekt
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                      Automatische Lead-Qualifizierung
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-2xl font-bold text-white">ab 899€</div>
+                      <div className="text-xs text-slate-400">Live in 7-10 Tagen</div>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* App entwickeln */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+              className="group cursor-pointer"
+              onClick={() => window.location.href = '/mvp-development'}
+            >
+              <Card className="relative h-full bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:to-cyan-600/10 transition-all duration-300" />
+                <CardContent className="p-8 relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-xl">
+                      <Sparkles className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        App entwickeln lassen
+                      </h3>
+                      <p className="text-sm text-slate-400">Von der Idee zum fertigen Produkt</p>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    Sie haben eine Geschäftsidee aber keine technische Umsetzung? Ich verwandle
+                    Ihre Vision in eine funktionsfähige Web-App - schnell und professionell.
+                  </p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+                      Moderne & sichere Technologie
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+                      Skalierbar für Ihren Erfolg
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+                      Komplette Betreuung von A-Z
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-2xl font-bold text-white">ab 2.499€</div>
+                      <div className="text-xs text-slate-400">Marktreif in 4-8 Wochen</div>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* Unsicher CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-slate-400 mb-4">Nicht sicher was Sie brauchen?</p>
+            <Button
+              variant="outline"
+              className="border-slate-600 hover:bg-slate-800"
+              onClick={() => window.open('https://calendly.com/mathis-kraekel-ijhy/30min', '_blank')}
+            >
+              Kostenloses Beratungsgespräch vereinbaren
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -189,41 +340,38 @@ export default function Home() {
           >
             <motion.div variants={fadeInUp}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Über mich
+                Was ich für Sie tue
               </h2>
               <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
                 <p>
-                  Hey! Ich bin Mathis, leidenschaftlicher Softwareentwickler mit abgeschlossenem Abitur.
-                  Derzeit arbeite ich bei der Seibert Group und vertiefe dort kontinuierlich meine Kenntnisse in moderner Softwareentwicklung.
+                  Ich verwandle Ihre Geschäftsideen in profitable digitale Lösungen.
+                  Seit über 3 Jahren helfe ich Unternehmen dabei, online mehr Kunden zu gewinnen und ihre Prozesse zu automatisieren.
                 </p>
                 <p>
-                  Meine Expertise umfasst die Arbeit mit Node.js, TypeScript, React und Next.js.
-                  Ich habe wertvolle Erfahrungen mit Atlassian-Tools, Google Cloud, Firebase und BigQuery gesammelt.
+                  Spezialisiert auf intelligente Formulare und Kalkulatoren, die aus Website-Besuchern zahlende Kunden machen.
+                  Meine Lösungen sind so gestaltet, dass sie Vertrauen aufbauen und zum Handeln motivieren.
                 </p>
                 <p>
-                  Ob bei der Entwicklung skalierbarer Backend-Systeme oder der Gestaltung intuitiver Benutzeroberflächen -
-                  ich konzentriere mich darauf, qualitativ hochwertige und effiziente Lösungen zu liefern.
+                  Von der ersten Idee bis zur fertigen Anwendung - ich begleite Sie durch den gesamten Prozess
+                  und sorge dafür, dass Ihre digitalen Tools messbare Ergebnisse liefern.
                 </p>
               </div>
-              <div className="flex gap-4 mt-8">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-slate-600 hover:bg-slate-800"
-                  onClick={() => window.open('https://github.com/mkraekel', '_blank')}
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  GitHub
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-slate-600 hover:bg-slate-800"
-                  onClick={() => window.open('https://www.linkedin.com/in/mathis-kr%C3%A4kel-b286b325a/', '_blank')}
-                >
-                  <Linkedin className="mr-2 h-4 w-4" />
-                  LinkedIn
-                </Button>
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg border border-blue-500/20">
+                <h3 className="text-xl font-semibold text-blue-400 mb-3">Mein Versprechen an Sie:</h3>
+                <ul className="text-slate-300 space-y-2">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    Mehr qualifizierte Leads für Ihr Unternehmen
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    Zeitersparnis durch Automatisierung
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    Messbare Steigerung Ihrer Conversion-Rate
+                  </li>
+                </ul>
               </div>
             </motion.div>
 

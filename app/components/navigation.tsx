@@ -23,9 +23,9 @@ export function Navigation() {
             className="hidden md:flex space-x-8"
           >
             <Link href="/#about" className="hover:text-blue-400 transition-colors">Über mich</Link>
-            <Link href="/#services" className="hover:text-blue-400 transition-colors">Services</Link>
+            <Link href="/lead-generation" className="hover:text-blue-400 transition-colors font-medium">Kunden gewinnen</Link>
+            <Link href="/mvp-development" className="hover:text-blue-400 transition-colors font-medium">App entwickeln</Link>
             <Link href="/#projects" className="hover:text-blue-400 transition-colors">Projekte</Link>
-            <Link href="/#testimonials" className="hover:text-blue-400 transition-colors">Referenzen</Link>
             <Link href="/#contact" className="hover:text-blue-400 transition-colors">Kontakt</Link>
           </motion.div>
         </div>

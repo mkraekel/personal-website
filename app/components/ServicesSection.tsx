@@ -22,56 +22,56 @@ export default function ServicesSection() {
     const services = [
         {
             icon: <Calculator className="h-10 w-10" />,
-            title: "Intelligente Lead-Formulare",
-            description: "Verwandeln Sie Besucher in Kunden mit maßgeschneiderten Formularen, die begeistern.",
+            title: "Kunden-Gewinnungs-Tools",
+            description: "Intelligente Online-Formulare und Rechner, die aus Website-Besuchern zahlende Kunden machen.",
             features: [
-                "ROI-Kalkulatoren die verkaufen",
-                "Multi-Step Formulare mit Fortschrittsanzeige",
-                "Intelligente Berechnungen in Echtzeit",
-                "Automatische Lead-Qualifizierung"
+                "Kostenkalkulator für Ihre Dienstleistung",
+                "Schritt-für-Schritt Formulare die konvertieren",
+                "Sofortige Preisberechnung für Kunden",
+                "Automatische Kontaktaufnahme mit Interessenten"
             ],
             highlight: true,
             gradient: "from-purple-600 to-blue-600",
-            cta: "Mehr erfahren",
+            cta: "Tool erstellen lassen",
             link: "/lead-generation",
-            price: "ab 499€",
+            price: "ab 899€",
             stats: [
-                { icon: <TrendingUp className="h-4 w-4" />, label: "Mehr Leads", value: "Garantiert" },
-                { icon: <Users className="h-4 w-4" />, label: "100% Custom", value: "Keine Templates" }
+                { icon: <TrendingUp className="h-4 w-4" />, label: "Mehr Anfragen", value: "Garantiert" },
+                { icon: <Users className="h-4 w-4" />, label: "Maßgeschneidert", value: "Für Ihr Business" }
             ]
         },
         {
             icon: <Rocket className="h-10 w-10" />,
-            title: "MVP Development",
-            description: "Von der Idee zum fertigen Produkt in Rekordzeit. Perfekt für Startups und neue Geschäftsideen.",
+            title: "Geschäftsidee zum fertigen Produkt",
+            description: "Von Ihrer Vision zur funktionsfähigen Web-App. Schnell, professionell und ohne Risiko.",
             features: [
-                "Next.js & Firebase Stack",
-                "Von Basic bis Advanced MVP",
-                "Schnelle Markteinführung",
-                "Skalierbare Architektur"
+                "Moderne und sichere Technologie",
+                "Von einfach bis komplex - alles möglich",
+                "Schnelle Umsetzung in wenigen Wochen",
+                "Wächst mit Ihrem Erfolg mit"
             ],
             highlight: true,
             gradient: "from-blue-600 to-cyan-600",
-            cta: "MVP starten",
+            cta: "Projekt starten",
             link: "/mvp-development",
-            price: "ab 1.999€",
+            price: "ab 2.499€",
             stats: [
-                { icon: <Clock className="h-4 w-4" />, label: "Time to Market", value: "4-8 Wochen" },
-                { icon: <Zap className="h-4 w-4" />, label: "Tech Stack", value: "Modern & Skalierbar" }
+                { icon: <Clock className="h-4 w-4" />, label: "Marktreif in", value: "4-8 Wochen" },
+                { icon: <Zap className="h-4 w-4" />, label: "Technologie", value: "Zukunftssicher" }
             ]
         },
         {
             icon: <Globe className="h-8 w-8" />,
-            title: "Web Development",
-            description: "Moderne Websites und Landing Pages mit erstklassiger Performance und Design.",
-            skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+            title: "Professionelle Websites",
+            description: "Moderne Websites die Vertrauen schaffen und Kunden überzeugen.",
+            skills: ["Schnelle Ladezeiten", "Mobile optimiert", "SEO-freundlich", "Conversion-optimiert"],
             gradient: "from-green-500 to-emerald-500"
         },
         {
             icon: <Database className="h-8 w-8" />,
-            title: "Full-Stack Lösungen",
-            description: "Komplette Web-Anwendungen von der Idee bis zur fertigen Lösung.",
-            skills: ["Node.js", "Express", "Firebase", "API Integration"],
+            title: "Automatisierungs-Lösungen",
+            description: "Sparen Sie Zeit und Geld durch intelligente Automatisierung Ihrer Geschäftsprozesse.",
+            skills: ["E-Mail Automation", "Daten-Synchronisation", "Workflow-Optimierung", "API-Integrationen"],
             gradient: "from-orange-500 to-red-500"
         }
     ]
@@ -93,13 +93,13 @@ export default function ServicesSection() {
                 >
                     <div className="inline-flex items-center gap-2 bg-purple-500/10 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                         <Sparkles className="h-4 w-4" />
-                        Services & Spezialisierungen
+                        Meine Lösungen für Ihren Erfolg
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                        Was ich für Sie entwickle
+                        So helfe ich Ihrem Unternehmen
                     </h2>
                     <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                        Von intelligenten Lead-Formularen über MVP-Entwicklung bis zu kompletten Web-Lösungen
+                        Maßgeschneiderte digitale Lösungen, die Ihnen mehr Kunden bringen und Zeit sparen
                     </p>
                 </motion.div>
 

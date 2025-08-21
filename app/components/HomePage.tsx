@@ -94,7 +94,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: "app.legalbot.de (noch nicht online)",
+      title: "app.legalbot.de",
       description: "Legalbot ist eine moderne Web-App zur digitalen Abwicklung von Rechtsdienstleistungen – mit Fokus auf Markenrecht. Die Plattform ermöglicht eine einfache und sichere Kommunikation zwischen Mandanten und Kanzleien und automatisiert zentrale Prozesse wie Markenanmeldungen und Markenüberwachung. ",
       image: "/legalbot.png",
       technologies: ["Next.js", "React", "Tailwind CSS", "Prisma", "Typescript", "Firestore"],

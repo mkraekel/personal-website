@@ -12,59 +12,84 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mathiskraekel.de"),
   alternates: { canonical: "/" },
+  title: "Mathis Kräkel - Mehr Kunden durch intelligente Web-Lösungen",
+  description: "Ich entwickle Kunden-Gewinnungs-Tools und Web-Apps, die Ihren Umsatz steigern. Intelligente Formulare, Kalkulatoren und maßgeschneiderte digitale Lösungen ab 899€. Kostenloses Beratungsgespräch.",
   keywords: [
-    "Mathis Kräkel",
-    "Softwareentwicklung",
-    "technische Beratung",
-    "Webentwicklung",
-    "React Entwickler",
-    "Next.js Entwickler",
-    "Node.js Entwickler",
-    "TypeScript Freelancer",
-    "Firebase Entwickler",
-    "TailwindCSS",
-    "Prisma",
-    "Web-App Entwicklung",
-    "Fullstack Webentwicklung",
-    "Freelancer Webentwicklung",
-    "maßgeschneiderte Softwarelösungen",
-    "moderne Web-Technologien",
-    "Entwickler aus Deutschland",
-    "Softwareentwickler Wiesbaden",
-    "Webentwickler Wiesbaden",
-    "Freelancer Wiesbaden",
-    "IT-Beratung Wiesbaden",
-    "Softwareentwickler Bad Schwalbach",
-    "Webentwickler Bad Schwalbach",
-    "Freelancer Bad Schwalbach",
-    "IT-Dienstleistungen Wiesbaden",
-    "Next.js Freelancer Wiesbaden",
-    "React Entwickler Hessen"
+    // Hauptkeywords - Kundenorientiert
+    "Kunden gewinnen online",
+    "Lead Generation Tools",
+    "intelligente Formulare",
+    "Online Kalkulatoren",
+    "Conversion Optimierung",
+    "Web App entwickeln lassen",
+    "MVP Entwicklung",
+    "Geschäftsidee umsetzen",
+    "digitale Kundengewinnung",
+    "Website Leads steigern",
+
+    // Service-spezifisch
+    "ROI Rechner erstellen lassen",
+    "Multi-Step Formulare",
+    "Kostenkalkulator Website",
+    "Lead Magnets entwickeln",
+    "Automatisierung Geschäftsprozesse",
+    "Web-Anwendung entwickeln",
+    "SaaS MVP entwickeln",
+    "Startup App entwicklung",
+
+    // Technisch aber kundenfreundlich
+    "React Entwickler für Unternehmen",
+    "Next.js Web App Entwicklung",
+    "professionelle Webentwicklung",
+    "maßgeschneiderte Software",
+    "digitale Transformation",
+
+    // Lokal
+    "Webentwickler Deutschland",
+    "Lead Generation Spezialist",
+    "App Entwickler Hessen",
+    "digitale Lösungen Unternehmen"
   ],
   authors: [{ name: "Mathis Kräkel", url: "https://mathiskraekel.de" }],
   creator: "Mathis Kräkel",
   publisher: "Mathis Kräkel",
   openGraph: {
-    title: "Mathis Kräkel – Softwareentwicklung & technische Beratung",
-    description:
-        "Professionelle Softwareentwicklung und technische Beratung. Maßgeschneiderte Lösungen für Ihre digitalen Herausforderungen.",
+    title: "Mathis Kräkel - Mehr Kunden durch intelligente Web-Lösungen",
+    description: "Intelligente Formulare und Kalkulatoren, die Website-Besucher in zahlende Kunden verwandeln. Maßgeschneiderte digitale Lösungen für mehr Umsatz.",
     url: "https://mathiskraekel.de",
-    siteName: "Mathis Kräkel – Softwareentwicklung & Beratung",
+    siteName: "Mathis Kräkel - Digitale Lösungen",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mathis Kräkel - Kunden-Gewinnungs-Tools und Web-App Entwicklung"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mathis Kräkel – Softwareentwicklung & technische Beratung",
-    description:
-        "Freelancer für Webentwicklung mit React, Next.js und TypeScript. Maßgeschneiderte Lösungen für digitale Projekte.",
+    title: "Mathis Kräkel - Mehr Kunden durch intelligente Web-Lösungen",
+    description: "Intelligente Formulare und Web-Apps, die Ihren Umsatz steigern. Kostenloses Beratungsgespräch verfügbar.",
+    images: ["/og-image.jpg"]
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#0f172a"
+  verification: {
+    google: "your-google-verification-code",
+    // Du musst diese in der Google Search Console holen
+  }
 };
 
 
@@ -73,8 +98,61 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mathis Kräkel - Digitale Lösungen",
+    "description": "Entwicklung von Kunden-Gewinnungs-Tools, intelligenten Formularen und Web-Apps für Unternehmen",
+    "url": "https://mathiskraekel.de",
+    "telephone": "+49-XXX-XXXXXXX", // Deine echte Telefonnummer
+    "email": "mathis@kraekel.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE",
+      "addressRegion": "Hessen"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mathis Kräkel",
+      "jobTitle": "Softwareentwickler & Digitaler Lösungsexperte"
+    },
+    "serviceType": [
+      "Lead Generation Tools",
+      "Intelligente Formulare",
+      "Web App Entwicklung",
+      "MVP Entwicklung",
+      "Conversion Optimierung"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Deutschland"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Kunden-Gewinnungs-Tools",
+        "description": "Intelligente Formulare und Kalkulatoren ab 899€",
+        "price": "899",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "App Entwicklung",
+        "description": "MVP-Entwicklung von der Idee zum fertigen Produkt ab 2.499€",
+        "price": "2499",
+        "priceCurrency": "EUR"
+      }
+    ]
+  };
+
   return (
     <html lang="de" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>
